@@ -54,7 +54,7 @@ object OutcomeAuditingRequests extends ServicesConfiguration {
     http("Report a payment allocation outcome")
       .post(s"$baseUrl$route")
       .header(HttpHeaderNames.ContentType, "application/json")
-      .header(HttpHeaderNames.UserAgent, "test-user-agent")
+      .header(HttpHeaderNames.UserAgent, "test-only")
       .body(StringBody(paymentAllocationJson))
       .asJson
       .check(status.is(200))
