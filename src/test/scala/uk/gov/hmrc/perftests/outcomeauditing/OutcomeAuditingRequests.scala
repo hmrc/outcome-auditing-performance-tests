@@ -40,7 +40,7 @@ object OutcomeAuditingRequests extends ServicesConfiguration {
       |  "outcome": {
       |    "outcomeType": "payment-allocation",
       |    "decision": "PAYMENT_ALLOCATED",
-      |    "reasons": "ACCOUNT_ALLOCATED_TO_DETAILS",
+      |    "reasons": ["ACCOUNT_ALLOCATED_TO_DETAILS"],
       |    "evidence": {
       |      "sa_utr": "0123456789",
       |      "paye_ref": "ABC/A1234",
@@ -58,5 +58,5 @@ object OutcomeAuditingRequests extends ServicesConfiguration {
       .body(StringBody(paymentAllocationJson))
       .asJson
       .check(status.is(200))
-      .check(jsonPath("$.code").is("ok"))
+      .check(bodyString.is(""))
 }
