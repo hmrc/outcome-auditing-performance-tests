@@ -21,6 +21,9 @@ import uk.gov.hmrc.perftests.outcomeauditing.OutcomeAuditingRequests.reportPayme
 
 class OutcomeAuditingSimulation extends PerformanceTestRunner {
 
-  setup("report-payment-allocation-outcome", "Report a payment allocation outcome") withRequests reportPaymentAllocationOutcome
+  setup(
+    "report-payment-allocation-outcome",
+    "Report a payment allocation outcome"
+  ) withRequests reportPaymentAllocationOutcome
   runSimulation()
 }
