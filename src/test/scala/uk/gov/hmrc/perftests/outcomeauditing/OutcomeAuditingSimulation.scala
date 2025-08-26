@@ -18,12 +18,18 @@ package uk.gov.hmrc.perftests.outcomeauditing
 
 import uk.gov.hmrc.performance.simulation.PerformanceTestRunner
 import uk.gov.hmrc.perftests.outcomeauditing.OutcomeAuditingRequests.reportPaymentAllocationOutcome
+import uk.gov.hmrc.perftests.outcomeauditing.V2.OutcomeAuditingV2Requests.reportAnOutcome
 
 class OutcomeAuditingSimulation extends PerformanceTestRunner {
 
   setup(
-    "report-payment-allocation-outcome",
-    "Report a payment allocation outcome"
+    "report-payment-allocation-outcome", "Report a payment allocation outcome"
   ) withRequests reportPaymentAllocationOutcome
+
+  setup(
+    "report-outcome-auditing-v2", "Report an outcome to outcome-auditing v2"
+  ) withRequests reportAnOutcome
+
+
   runSimulation()
 }
