@@ -28,10 +28,16 @@ object OutcomeAuditingV2Requests extends ServicesConfiguration {
 
   val outcomeJson: String =
     """{
-      |  "correlationData": {
-      |    "correlationId": "33df37a4-a535-41fe-8032-7ab718b45526",
-      |    "correlationIdType": "ACKNOWLEDGEMENT_ID"
-      |  },
+      |  "correlationData": [
+      |     {
+      |       "correlationId": "33df37a4-a535-41fe-8032-7ab718b45526",
+      |       "correlationIdType": "SUBMISSION_ID"
+      |     },
+      |     {
+      |       "correlationId": "22bbf4e1-5f4c-4d2e-9c8b-1f4e6e8c9a12",
+      |       "correlationIdType": "SESSION_ID"
+      |     }
+      |  ],
       |  "submitter": "sa-reg",
       |  "decisionData": [
       |    {
