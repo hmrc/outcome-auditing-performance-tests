@@ -42,7 +42,7 @@ object OutcomeAuditingV2Requests extends ServicesConfiguration {
       |  "decisionData": [
       |    {
       |      "businessEvent": "SARegistrationSubmitted",
-      |      "decision": "ACCEPT",
+      |      "decision": "ACCEPTED",
       |      "reasons": [
       |        "LOW_RISK_SCORE"
       |      ],
